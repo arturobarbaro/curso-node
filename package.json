@@ -4,19 +4,21 @@
   "description": "Hola mundo",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "watch": "nodemon",
+    "lint": "standard 'src/**/*.js'"
   },
   "keywords": [
     "nodejs"
   ],
   "author": "Arturo",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0"
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.19.1",
+    "standard": "^10.0.3"
   }
 }
