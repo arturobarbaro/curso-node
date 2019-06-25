@@ -1,10 +1,14 @@
 import express from 'express'
 
+import config from './config'
+
 let _server
 
 const server = {
-  start() {
+  start () {
     const app = express()
+
+    config(app)
 
     _server = app.listen('9000', () => {
       const address = _server.address()
@@ -19,7 +23,7 @@ const server = {
 
     return _server
   },
-  close() {
+  close () {
     _server.close()
   }
 }
